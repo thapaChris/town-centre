@@ -53,3 +53,23 @@
     opacity: 1;
   }
 }
+
+.feature-item h5 {
+  font-size: 1.2rem;         /* Slightly larger font for the title */
+}
+
+.feature-item p {
+  font-size: 0.95rem;        /* Keep the paragraph text slightly smaller */
+  margin-bottom: 0;          /* Remove unnecessary extra spacing */
+  color: #555;               /* Muted color for readability */
+}
+
+.feature-item:not(:last-child) {
+  border-bottom: 1px solid #ddd;  /* Add a divider between items */
+  padding-bottom: 1.5em;           /* Space below the divider */
+}
+
+.btn-success {
+  border-radius: 20px;        /* Optional: Softer button edges */
+  padding: 1em ;
+}
