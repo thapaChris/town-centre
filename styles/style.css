@@ -5,6 +5,11 @@ body{
     
     
   }
+
+  nav .container-fluid{
+    background-color: transparent;
+   
+  }
   
 
   .slide img {

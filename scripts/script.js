@@ -1,21 +1,23 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-function navigateSlide(n) {
-  showSlides(slideIndex += n);
+function changeSlide(n) {
+  slideIndex += n;
+
+  // Wrap around when navigating out of bounds
+  if (slideIndex > document.getElementsByClassName("slide").length) {
+    slideIndex = 1; // Go back to the first slide
+  } else if (slideIndex < 1) {
+    slideIndex = document.getElementsByClassName("slide").length; // Go to the last slide
+  }
+
+  showSlides(slideIndex);
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-
+// Display the current slide
 function showSlides(n) {
   const slides = document.getElementsByClassName("slide");
   const dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) slideIndex = 1;
-  if (n < 1) slideIndex = slides.length;
 
   // Hide all slides
   for (let i = 0; i < slides.length; i++) {
@@ -27,14 +29,15 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  // Show current slide and highlight the corresponding dot
-  slides[slideIndex - 1].style.display = "block";
-  if (dots[slideIndex - 1]) {
+  // Show the current slide and set the corresponding dot as active
+  if (slides.length > 0) {
+    slides[slideIndex - 1].style.display = "block"; // Display the current slide
+  }
+
+  if (dots.length > 0 && dots[slideIndex - 1]) {
     dots[slideIndex - 1].className += " active";
   }
 }
-
-
 
 // function currentSlide(n) {
 //   showSlides(slideIndex = n);
@@ -56,3 +59,4 @@ function closeModal() {
   const modal = document.getElementById("imageModal");
   modal.style.display = "none";
 }
+
