@@ -1,5 +1,11 @@
-/* Ensure content is not hidden under the navbar */
-
+body{
+    
+    font-family: "Merriweather", serif;
+  
+    
+    
+  }
+  
 
 /* Slideshow container */
 .slideshow-container {
@@ -47,7 +53,7 @@
 
 @keyframes fade {
   from {
-    opacity: 0.4;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -202,3 +208,8 @@ body {
 .room-card .btn-primary:hover {
   background-color: #225031;
 }
+
+#about{
+  margin-top: 2em;
+}
+
