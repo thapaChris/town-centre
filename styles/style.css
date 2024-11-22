@@ -1,0 +1,55 @@
+/* Ensure content is not hidden under the navbar */
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Slides */
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Navigation dots */
+.dot-container {
+  text-align: center;
+  position: relative;
+  top: 0.5em;
+}
+
+.dot {
+  cursor: pointer;
+  height: 1em;
+  width: 1em;
+  margin: 0.5em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+/* Fade effect for slides */
+.fade {
+  animation: fade 1.5s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
