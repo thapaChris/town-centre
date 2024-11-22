@@ -190,3 +190,15 @@ body {
   color: #2c3e50;
   margin-bottom: 1rem;
 }
+
+/* room card button */
+.room-card .btn-primary {
+  background-color: #2A6041;
+  border: none;
+  
+
+}
+
+.room-card .btn-primary:hover {
+  background-color: #225031;
+}
