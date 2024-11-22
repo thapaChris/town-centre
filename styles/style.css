@@ -7,73 +7,59 @@ body{
   }
   
 
-/* Slideshow container */
-.slideshow-container {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-  overflow: hidden;
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .slideshow-container {
+    max-width: 800px; /* Adjust container size */
+    margin: auto;
+    position: relative;
+  }
+
+/* Navigation buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 18px;
 }
 
-/* Slides */
-.slide {
-  display: none;
+.prev {
+  left: 10px;
 }
 
-.slide img {
-  width: 100%;
-  height: auto;
+.next {
+  right: 10px;
 }
 
-/* Navigation dots */
-.dot-container {
+/* Dots */
+.dots-container {
   text-align: center;
-  position: relative;
-  top: 0.5em;
+  margin-top: 10px;
 }
 
 .dot {
-  cursor: pointer;
-  height: 1em;
-  width: 1em;
-  margin: 0.5em;
-  background-color: #bbb;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: gray;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
 }
 
 .dot.active {
-  background-color: #717171;
+  background-color: black;
 }
 
-/* Fade effect for slides */
-.fade {
-  animation: fade 1.5s ease-in-out;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.feature-item h5 {
-  font-size: 1.2rem;         /* Slightly larger font for the title */
-}
-
-.feature-item p {
-  font-size: 0.95rem;        /* Keep the paragraph text slightly smaller */
-  margin-bottom: 0;          /* Remove unnecessary extra spacing */
-  color: #555;               /* Muted color for readability */
-}
-
-.feature-item:not(:last-child) {
-  border-bottom: 1px solid #ddd;  /* Add a divider between items */
-  padding-bottom: 1.5em;           /* Space below the divider */
-}
 
 
 
@@ -211,5 +197,22 @@ body {
 
 #about{
   margin-top: 2em;
+}
+
+
+@media (max-width: 768px) {
+  .prev, .next {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .dots {
+    margin-top: 10px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
 }
 
