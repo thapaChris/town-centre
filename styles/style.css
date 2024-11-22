@@ -8,13 +8,14 @@ body{
 
   nav .container-fluid{
     background-color: transparent;
+    
    
   }
   
 
   .slide img {
     width: 100%;
-    height: auto;
+    height: 70vh;
     display: block;
   }
   
@@ -201,7 +202,7 @@ body {
 }
 
 #about{
-  margin-top: 2em;
+  margin-top: 8em;
 }
 
 
