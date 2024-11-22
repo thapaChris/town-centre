@@ -155,3 +155,38 @@ body {
   padding: 10px;
   font-size: 1.2rem;
 }
+
+/* Details Section Hover Move Effect */
+.details-section {
+  position: relative;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.details-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Styling for Details Section */
+.details-section ul {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.details-section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.details-section h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
