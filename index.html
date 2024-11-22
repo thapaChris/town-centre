@@ -35,10 +35,10 @@
                 Rooms
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Single bed</a></li>
-                <li><a class="dropdown-item" href="#">Double bed</a></li>
+                <li><a class="dropdown-item" href="#single">Single bed</a></li>
+                <li><a class="dropdown-item" href="#double">Double bed</a></li>
                
-                <li><a class="dropdown-item" href="#">Twin bed</a></li>
+                <li><a class="dropdown-item" href="#twin">Twin bed</a></li>
               </ul>
             </li>
           </ul>
@@ -109,7 +109,7 @@
               <h5 class="fw-bold text-primary mb-1"> Local Charm</h5>
               <p>Immerse yourself in the vibrant culture and warm hospitality that Mokokchung is renowned for.</p>
             </div>
-            <a href="#rooms" class="btn btn-success mt-4">Explore Our Rooms</a>
+           
           </div>
         </div>
         
@@ -117,6 +117,64 @@
     </div>
   </div>
 </section>
+
+<div class="container py-5">
+  <div class="row g-4">
+
+    <!-- Single Bed Room Card -->
+    <div class="col-md-4">
+      <div  class="room-card" onclick="showModal('images/single.jpg', 'Single Bed Room')">
+        <img id="single" src="images/single.jpg" alt="Single Bed Room" class="img-fluid">
+        <div class="overlay">
+          <div class="overlay-text">View Full Picture</div>
+        </div>
+        <div class="room-details p-3">
+          <h5 class="fw-bold">Single Bed Room</h5>
+          <p class="mb-1">Perfect for solo travelers. Cozy and comfortable.</p>
+          <p class="text-success fw-bold">$50/night</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Double Bed Room Card -->
+    <div class="col-md-4">
+      <div class="room-card" onclick="showModal('images/double.jpg', 'Double Bed Room')">
+        <img id="double" src="images/double.jpg" alt="Double Bed Room" class="img-fluid">
+        <div class="overlay">
+          <div class="overlay-text">View Full Picture</div>
+        </div>
+        <div class="room-details p-3">
+          <h5 class="fw-bold">Double Bed Room</h5>
+          <p class="mb-1">Ideal for couples or small families.</p>
+          <p class="text-success fw-bold">$80/night</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Twin Bed Room Card -->
+    <div class="col-md-4">
+      <div class="room-card" onclick="showModal('images/twin.JPG', 'Twin Bed Room')">
+        <img id="twin" src="images/twin.JPG" alt="Twin Bed Room" class="img-fluid">
+        <div class="overlay">
+          <div class="overlay-text">View Full Picture</div>
+        </div>
+        <div class="room-details p-3">
+          <h5 class="fw-bold">Twin Bed Room</h5>
+          <p class="mb-1">Great for friends or siblings sharing a room.</p>
+          <p class="text-success fw-bold">$70/night</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img id="modalImage" class="modal-content">
+  <div id="modalCaption"></div>
+</div>
 
 
 

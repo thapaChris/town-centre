@@ -30,3 +30,19 @@ function currentSlide(n) {
   slideIndex = n - 1; // Adjust index for zero-based array
   showSlides();
 }
+
+// rooms section
+function showModal(imageSrc, caption) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const modalCaption = document.getElementById("modalCaption");
+
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+  modalCaption.textContent = caption;
+}
+
+function closeModal() {
+  const modal = document.getElementById("imageModal");
+  modal.style.display = "none";
+}
